@@ -4,7 +4,9 @@ namespace HackersWars.Interfaces
 {
     public interface IEngine
     {
-        IList<bool> IsHacherGroupsAlive();
+        
+
+        bool IsHacherGroupsAlive();
 
         void UpdateAttacherWarEffectState();
 

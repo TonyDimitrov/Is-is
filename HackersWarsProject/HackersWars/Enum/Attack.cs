@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HackersWars.Interfaces
+namespace HackersWars.Enum
 {
-    interface IReader
+    public enum Attack
     {
-       List<string> Reader();
+        Paris, 
+        SU24
     }
 }

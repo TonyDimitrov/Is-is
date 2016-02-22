@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using HackersWars.Interfaces;
 
-namespace HackersWars
+namespace HackersWars.Models
 {
-    internal class MainEntry
+    public class ConsoleReader : IReader
     {
-        private static void Main(string[] args)
+        public List<string> Reader()
         {
-            // Hacher group has a name, health, damage, war effect and attack type //
-            // War effect JihadEffect and Kamikaze
-            // Attack Type Paris and SU24
-            Console.WriteLine("Tony");
             string input = Console.ReadLine();
             Regex pattern = new Regex("(\\w+)");
             MatchCollection matches = pattern.Matches(input);
@@ -21,6 +17,7 @@ namespace HackersWars
             {
                 elements.Add(w.ToString());
             }
+            return elements;
         }
     }
 }

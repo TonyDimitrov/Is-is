@@ -1,9 +1,10 @@
 ﻿using System.Net.Configuration;
+using HackersWars.Enum;
 
 namespace HackersWars.Interfaces
 {
     public interface IHacherGroupFactory
     {
-        void CreateGacherGroup(string name, int damage, int health, bool isAlive, IWarEffect warEffect, IAttack attack);
+        IHacherGroup CreateGacherGroup(string name, int health, int damage, bool isAlive, IWarEffect warEffect, Attack attack);
     }
 }

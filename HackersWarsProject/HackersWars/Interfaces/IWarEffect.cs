@@ -1,9 +1,11 @@
-﻿namespace HackersWars.Interfaces
+﻿using HackersWars.Enum;
+
+namespace HackersWars.Interfaces
 {
     public interface IWarEffect
     {
-        string WarEffectType { get; set; }
-        bool IsWarEffectTogged { get; set; }
+        WarEffectType WarEffectType { get; set; }
+        bool IsWarEffectTogled { get; set; }
         bool IsEffectActive { get; set; }
     }
 }

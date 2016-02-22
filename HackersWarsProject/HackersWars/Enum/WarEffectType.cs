@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HackersWars.Interfaces
+namespace HackersWars.Enum
 {
-    interface IReader
+    public enum WarEffectType
     {
-       List<string> Reader();
+        Jihad,
+        Kamikaze
     }
 }

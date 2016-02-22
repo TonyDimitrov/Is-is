@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackersWars", "HackersWars\HackersWars.csproj", "{0138FB77-AD0A-4B35-9895-4F22B33B426D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZHelper", "ZHelper\ZHelper.csproj", "{137A2E9D-63DA-4769-8E53-C706F5186F0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0138FB77-AD0A-4B35-9895-4F22B33B426D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0138FB77-AD0A-4B35-9895-4F22B33B426D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0138FB77-AD0A-4B35-9895-4F22B33B426D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{137A2E9D-63DA-4769-8E53-C706F5186F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137A2E9D-63DA-4769-8E53-C706F5186F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137A2E9D-63DA-4769-8E53-C706F5186F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137A2E9D-63DA-4769-8E53-C706F5186F0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,10 @@
-﻿namespace HackersWars.Interfaces
+﻿using HackersWars.Enum;
+
+namespace HackersWars.Interfaces
 {
     internal interface IWarEffectFactory
     {
-        void CreateWarEffect();
-    }
+        IWarEffect CreateWarEffect(WarEffectType warEffectType, bool isWarEffectToggled, bool isWarEffectActive);
+
+  }
 }

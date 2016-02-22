@@ -1,4 +1,5 @@
-﻿using HackersWars.Interfaces;
+﻿using HackersWars.Enum;
+using HackersWars.Interfaces;
 
 namespace HackersWars.Models
 {
@@ -10,15 +11,13 @@ namespace HackersWars.Models
         private int damage;
         private bool isAlive;
         private IWarEffect warEffect;
-        private IAttack attack;
 
-
-        public HacherGroup(string name, int health, int initialHealth, int damage,
-            bool isAlive, IWarEffect warEffect, IAttack attack)
+        public HacherGroup(string name, int health, int damage,
+            bool isAlive, IWarEffect warEffect, Attack attack)
         {
             this.Name = name;
             this.Health = health;
-            this.InitialHealth = initialHealth;
+            this.InitialHealth = health;
             this.Damage = damage;
             this.IsAlive = isAlive;
             this.WarEffect = warEffect;
@@ -27,12 +26,14 @@ namespace HackersWars.Models
 
 
 
-        public string Name { get; set; }
+        public string Name { get; }
         public int Health { get; set; }
         public int InitialHealth { get; set; }
         public int Damage { get; set; }
         public bool IsAlive { get; set; }
         public IWarEffect WarEffect { get; set; }
-        public IAttack Attack { get; set; }
+        public Attack Attack { get; }
+
+
     }
 }

@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HackersWars.Interfaces
+namespace ZHelper
 {
-    interface IReader
+    public enum Types
     {
-       List<string> Reader();
+        Wood,
+        Iron,
+        Plastic
     }
 }
