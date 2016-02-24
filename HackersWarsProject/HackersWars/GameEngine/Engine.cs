@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HackersWars.Enum;
 using HackersWars.Interfaces;
+using HackersWars.Models;
 
 namespace HackersWars.GameEngine
 {
@@ -52,11 +53,20 @@ namespace HackersWars.GameEngine
                             throw new ArgumentException("Could not parse string to Enum type!");
                         }
                         var effect = warEffectFactory.CreateWarEffect(effectType, false, false);
-                        hacherGroupFactory.CreateGacherGroup(name, health, damage, true, effect, attack);
+                        var  hackerGroup = hacherGroupFactory.CreateGacherGroup(name, health, damage, true, effect, attack);
+                        this.gameData.AddGameData(name, hackerGroup);
                         break;
                     case "attack":
                         // Implement attacks ..... //
-
+                        string attacker = input[0];
+                        string attacked = input[2];
+                        if (IsHacherGroupsAlive(attacker) && IsHacherGroupsAlive(attacked))
+                        {
+                            var attacherGroup = FindHacherGroupByName(attacker);
+                            var victimGroup = FindHacherGroupByName(attacked);
+                            ShouldTriggerAttackerWarEffect(attacherGroup);
+                            ShouldTrigerVictimWarEffect(attacherGroup, victimGroup);
+                        }
                         break;
                     case "status":
                         break;
@@ -72,27 +82,33 @@ namespace HackersWars.GameEngine
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        public bool IsHacherGroupsAlive()
+        public bool IsHacherGroupsAlive(string groupName)
         {
-            throw new NotImplementedException();
+            if (this.gameData.Data.ContainsKey(groupName))
+            {
+               var  group = this.gameData.Data[groupName];
+                return group.IsAlive;
+            }
+            else
+            {
+                throw new KeyNotFoundException("Such Key in Dictionary not found!");
+            }
         }
 
-        public void UpdateAttacherWarEffectState()
+        public void UpdateAttacherWarEffectState(string groupName)
         {
-            throw new NotImplementedException();
+            if (this.gameData.Data.ContainsKey(groupName))
+            {
+                var group = this.gameData.Data[groupName];
+                if (!group.WarEffect.IsWarEffectTogled)
+                {
+                    
+                }
+            }
+            else
+            {
+                throw new KeyNotFoundException("Such Key in Dictionary not found!");
+            }
         }
 
         public void PerformAttack()
@@ -108,6 +124,38 @@ namespace HackersWars.GameEngine
         public void GetGameStatus()
         {
             throw new NotImplementedException();
+        }
+
+        private IHacherGroup FindHacherGroupByName(string groupName)
+        {
+            var group = gameData.Data[groupName];
+            return group;
+        }
+        private void ShouldTriggerAttackerWarEffect(IHacherGroup group)
+        {
+            if (group.Attack == Attack.SU24 )
+            {
+                if (group.Health != 1)
+                {
+                    double halfhealth = Math.Ceiling((double)group.InitialHealth / 2);
+                    group.Health = (int)halfhealth;
+                    group.WarEffect.IsEffectActive = true;
+                    group.WarEffect.IsWarEffectTogled = true;
+                    if (group.WarEffect.WarEffectType == WarEffectType.Jihad)
+                    {
+                        group.Damage *= 2;
+                    }
+                    else
+                    {
+                        group.Health += 50;
+                    }
+                }
+            }         
+        }
+
+        private void ShouldTrigerVictimWarEffect(IHacherGroup attacker, IHacherGroup attacked)
+        {
+            // TODO 
         }
     }
 }

@@ -9,6 +9,7 @@ namespace HackersWars.Models
         private int health;
         private int initialHealth;
         private int damage;
+        private int initialDamage;
         private bool isAlive;
         private IWarEffect warEffect;
 
@@ -19,6 +20,7 @@ namespace HackersWars.Models
             this.Health = health;
             this.InitialHealth = health;
             this.Damage = damage;
+            this.InitialDamage = damage;
             this.IsAlive = isAlive;
             this.WarEffect = warEffect;
             this.Attack = attack;
@@ -30,6 +32,7 @@ namespace HackersWars.Models
         public int Health { get; set; }
         public int InitialHealth { get; set; }
         public int Damage { get; set; }
+        public int InitialDamage { get; set; }
         public bool IsAlive { get; set; }
         public IWarEffect WarEffect { get; set; }
         public Attack Attack { get; }

@@ -11,7 +11,8 @@ namespace HackersWars.Interfaces
          int Health { get; set; }
         int InitialHealth { get; set; }
         int Damage { get; set; }
-         bool IsAlive { get; set; }
+        int InitialDamage { get; set; }
+        bool IsAlive { get; set; }
         IWarEffect WarEffect { get; set; }
         Attack Attack { get; }
 

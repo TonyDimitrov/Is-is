@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace HackersWars.Interfaces
 {
-    internal interface IGameData
+    internal interface IGameData 
     {
-        IDictionary Data { get; set; }
+        IDictionary<string, IHacherGroup> Data { get; set; }
 
         void AddGameData(string hackerGroupName, IHacherGroup hackerGroup);
     }

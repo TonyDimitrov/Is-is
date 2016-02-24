@@ -12,11 +12,12 @@ namespace HackersWars.Models
             this.Data = new Dictionary<string, IHacherGroup>();
         }
 
-        public IDictionary Data { get; set; }
+        public IDictionary<string, IHacherGroup> Data { get; set; }
 
         public void AddGameData(string hackerGroupName, IHacherGroup hackerGroup)
         {
             Data.Add(hackerGroupName, hackerGroup);
         }
-    }
+
+        }
 }

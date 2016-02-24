@@ -6,9 +6,9 @@ namespace HackersWars.Interfaces
     {
         
 
-        bool IsHacherGroupsAlive();
+        bool IsHacherGroupsAlive(string groupName);
 
-        void UpdateAttacherWarEffectState();
+        void UpdateAttacherWarEffectState(string groupName);
 
         void PerformAttack();
 

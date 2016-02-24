@@ -1,0 +1,13 @@
+﻿1>------ Build started: Project: HackersWars, Configuration: Debug Any CPU ------
+1>C:\VS2015\Is-is\HackersWarsProject\HackersWars\Models\HacherGroup.cs(14,28,14,37): warning CS0169: The field 'HacherGroup.warEffect' is never used
+1>C:\VS2015\Is-is\HackersWarsProject\HackersWars\Models\HacherGroup.cs(11,21,11,27): warning CS0169: The field 'HacherGroup.damage' is never used
+1>C:\VS2015\Is-is\HackersWarsProject\HackersWars\Models\WarEffect.cs(9,22,9,39): warning CS0169: The field 'WarEffect.isWarEffectTogged' is never used
+1>C:\VS2015\Is-is\HackersWarsProject\HackersWars\Models\HacherGroup.cs(10,21,10,34): warning CS0169: The field 'HacherGroup.initialHealth' is never used
+1>C:\VS2015\Is-is\HackersWarsProject\HackersWars\Models\HacherGroup.cs(8,24,8,28): warning CS0169: The field 'HacherGroup.name' is never used
+1>C:\VS2015\Is-is\HackersWarsProject\HackersWars\Models\HacherGroup.cs(9,21,9,27): warning CS0169: The field 'HacherGroup.health' is never used
+1>C:\VS2015\Is-is\HackersWarsProject\HackersWars\Models\HacherGroup.cs(12,21,12,34): warning CS0169: The field 'HacherGroup.initialDamage' is never used
+1>C:\VS2015\Is-is\HackersWarsProject\HackersWars\Models\WarEffect.cs(10,22,10,36): warning CS0169: The field 'WarEffect.isEffectActive' is never used
+1>C:\VS2015\Is-is\HackersWarsProject\HackersWars\Models\HacherGroup.cs(13,22,13,29): warning CS0169: The field 'HacherGroup.isAlive' is never used
+1>C:\VS2015\Is-is\HackersWarsProject\HackersWars\Models\WarEffect.cs(8,31,8,44): warning CS0169: The field 'WarEffect.warEffectType' is never used
+1>  HackersWars -> C:\VS2015\Is-is\HackersWarsProject\HackersWars\bin\Debug\HackersWars.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

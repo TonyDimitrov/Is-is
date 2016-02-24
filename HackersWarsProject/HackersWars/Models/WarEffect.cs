@@ -5,7 +5,7 @@ namespace HackersWars.Models
 {
     class WarEffect : IWarEffect
     {
-        private string warEffectType;
+        private WarEffectType warEffectType;
         private bool isWarEffectTogged;
         private bool isEffectActive;
 
