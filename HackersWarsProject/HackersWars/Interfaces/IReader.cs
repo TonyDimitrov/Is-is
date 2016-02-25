@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HackersWars.Interfaces
 {
-    interface IReader
+   public interface IReader
     {
        List<string> Reader();
     }

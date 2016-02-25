@@ -2,7 +2,7 @@
 
 namespace HackersWars.Interfaces
 {
-    internal interface IWarEffectFactory
+    public interface IWarEffectFactory
     {
         IWarEffect CreateWarEffect(WarEffectType warEffectType, bool isWarEffectToggled, bool isWarEffectActive);
 

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using HackersWars.Factories;
+using HackersWars.GameEngine;
+using HackersWars.Interfaces;
+using HackersWars.Models;
 
 namespace HackersWars
 {
@@ -9,18 +13,15 @@ namespace HackersWars
     {
         private static void Main(string[] args)
         {
-            // Hacher group has a name, health, damage, war effect and attack type //
-            // War effect JihadEffect and Kamikaze
-            // Attack Type Paris and SU24
-            Console.WriteLine("Tony");
-            string input = Console.ReadLine();
-            Regex pattern = new Regex("(\\w+)");
-            MatchCollection matches = pattern.Matches(input);
-            List<string> elements = new List<string>();
-            foreach (var w in matches)
-            {
-                elements.Add(w.ToString());
-            }
+         IHacherGroupFactory hacherGroupFactory = new HackerGroupFactory();
+         IWarEffectFactory warEffectFactory = new WarEffectFactory();
+            IReader reader = new ConsoleReader();
+       IWriter writer = new Writer();
+        IGameData gameData = new GameData();
+        Engine engine = new Engine(hacherGroupFactory, warEffectFactory, reader, writer, gameData);
+
+            engine.Run();
+
         }
     }
 }

@@ -1,19 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace HackersWars.Interfaces
 {
     public interface IEngine
     {
-        
-
-        bool IsHacherGroupsAlive(string groupName);
-
-        void UpdateAttacherWarEffectState(string groupName);
-
-        void PerformAttack();
-
-        void UpdateHackerGroups();
-
-        void GetGameStatus();
+        void Run();
     }
 }

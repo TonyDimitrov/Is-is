@@ -11,9 +11,23 @@ namespace ZHelper
     {
         static void Main(string[] args)
         {
-            int n = 51;
-   //         int m = int.Parse(Math.Ceiling((decimal)n/2));
-            Console.WriteLine();
+ 
+            Client client1 = new Client("Zoony", 0896554433, false);
+            Client client2 = new Client("Tony", 0987654, true);
+            Client Client3 = new Client("Aary", 6879596, true);
+
+            Data data = new Data();
+
+            data.AddData(client1);
+            data.AddData(client2);
+            data.AddData(Client3);
+
+            var newData = data.Dictionary.OrderByDescending(x => x.Value.Name)
+                .ThenByDescending(y => y.Value.Alive).ToDictionary(x => x.Key, y => y.Value);
+            foreach (var item in newData)
+            {
+                Console.WriteLine(item.Value.Name + " " +item.Key);
+            }
 
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace HackersWars.Interfaces
 {
-    internal interface IWriter
+    public interface IWriter
     {
         void Write();
     }

@@ -10,11 +10,11 @@ namespace ZHelper
     {
         private string name;
 
-        public Client(string name, int phNumber, string address)
+        public Client(string name, int phNumber, bool alive = true)
         {
             this.Name = name;
             this.PhoneNumber = phNumber;
-            this.Address = address;
+            this.Alive = alive;
         }
 
         public string Name
@@ -32,6 +32,6 @@ namespace ZHelper
 
         public int PhoneNumber { get; }
 
-        public string Address { get; set; }
+        public bool Alive { get; set; }
     }
 }
